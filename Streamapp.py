@@ -28,7 +28,7 @@ league_code = LEAGUES[selected_league]
 @st.cache_data(ttl=15)  # Cache for 15 seconds to prevent rate-limiting and handle multiple users
 def fetch_live_scores(league):
     # Fixed URL structure with trailing slash preserved
-    url = f"https://espn.com{league}/scoreboard"
+    url = f"https://espn.com/{league}/scoreboard"
     try:
         response = requests.get(url, timeout=5)
         if response.status_code == 200:

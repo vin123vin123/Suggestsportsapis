@@ -28,7 +28,7 @@ league_code = LEAGUES[selected_league]
 
 # --- DATA FETCH FUNCTION ---
 def fetch_live_scores(league):
-    url = f"https://espn.com{league}/scoreboard"
+    url = f"https://espn.com/{league}/scoreboard"
     try:
         response = requests.get(url, timeout=10)
         if response.status_code == 200:
